@@ -8,14 +8,15 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Run a multi-line script
+    - name: Start
+      run: echo Start
+    - name: Slow
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
-        for ((i=1;i<=100;i++)); do
+        for ((i=1;i<=200;i++)); do
         echo $i
         sleep 1
         done
+    - name: End
+      run: echo Done
